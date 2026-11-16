@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+    background-color: #151515;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+/* Custom utility for hiding scrollbars on horizontal filter bars while preserving scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes rfSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.98);
+    box-shadow: 0 0 0 2px #E87519, 0 12px 28px -8px rgba(232, 117, 25, 0.35);
+    border-color: #E87519;
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 2px #E87519, 0 10px 24px -8px rgba(232, 117, 25, 0.25);
+    border-color: #E87519;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: none;
+  }
+}
+
+.animate-order-slide-down {
+  animation: rfSlideDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+  }
+}

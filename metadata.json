@@ -1,0 +1,6 @@
+{
+  "name": "RESTO FLASH - Espace Restaurateur",
+  "description": "Back-office de gestion pour restaurateurs : menu, commandes, paiements manuels, QR code unique et configuration d'établissement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
